@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kelola User</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/kelola.css') }}">
+</head>
+<body>
+
+<div class="admin-container">
+
+    <h2>Kelola User</h2>
+
+    <p><strong>Admin:</strong> {{ session.email }}</p>
+
+    <hr>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.role }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+
+    <a href="/dashboard">⬅ Kembali ke Dashboard</a> |
+    <a href="/logout">Logout</a>
+
+</div>
+
+</body>
+</html>

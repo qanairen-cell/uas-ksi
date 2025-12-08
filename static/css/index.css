@@ -1,0 +1,67 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(135deg, #ffd1dc, #ffe6f0);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BOX UTAMA */
+.container {
+    background: white;
+    width: 380px;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* LOGO */
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+/* JUDUL */
+h1 {
+    color: #d63384;
+    margin-bottom: 10px;
+}
+
+/* DESKRIPSI */
+p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* TOMBOL */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: white;
+    transition: 0.2s;
+}
+
+.btn-login {
+    background-color: #d36767;
+}
+
+.btn-register {
+    background-color: #c73535;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}

@@ -1,0 +1,118 @@
+/* admin.css */
+
+/* Warna pink soft yang konsisten */
+:root {
+    --soft-pink-bg: #fdf5f6;
+    --light-pink: #f8c8d0;
+    --medium-pink: #f19eb0;
+    --dark-pink: #e96d85;
+    --white: #ffffff;
+    --dark-text: #333333;
+    --light-gray: #eeeeee;
+    --shadow-pink: rgba(241, 158, 176, 0.2);
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--soft-pink-bg);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Kontainer utama untuk memusatkan dashboard */
+.admin-container {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-pink);
+    width: 100%;
+    max-width: 700px;
+    margin-top: 50px;
+}
+
+h2 {
+    color: var(--dark-pink);
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+/* Garis pembatas */
+hr {
+    border: none;
+    border-top: 1px solid var(--light-pink);
+    margin: 25px 0;
+}
+
+/* Info pengguna (Email & Role) */
+p {
+    font-size: 1.1em;
+    margin: 5px 0;
+    padding: 8px 15px;
+    background-color: var(--soft-pink-bg); /* Latar belakang lembut untuk info */
+    border-radius: 5px;
+}
+
+strong {
+    color: var(--medium-pink);
+}
+
+/* Judul fitur */
+h3 {
+    color: var(--dark-text);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--light-pink);
+    padding-bottom: 5px;
+}
+
+/* Daftar fitur (Menu navigasi) */
+ul {
+    list-style: none; /* Hilangkan bullet point default */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li a {
+    display: block;
+    padding: 12px 15px;
+    background-color: var(--light-pink);
+    color: var(--dark-text);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+li a:hover {
+    background-color: var(--dark-pink);
+    color: var(--white);
+}
+
+/* Tombol Logout */
+a[href="/logout"] {
+    display: block;
+    width: 150px;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--medium-pink);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+a[href="/logout"]:hover {
+    background-color: #c25970; /* Sedikit lebih gelap dari medium-pink */
+}

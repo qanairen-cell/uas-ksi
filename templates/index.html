@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Halaman Utama</title>
+
+    <!-- PANGGIL FILE CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+
+    <h1>Sistem Keamanan</h1>
+
+    <p>
+        Mardianti H. Karim - 236250082 <br>
+    </p>
+
+    <div class="buttons">
+        <a href="/login" class="btn btn-login">Login</a>
+        <a href="/register" class="btn btn-register">Daftar</a>
+    </div>
+</div>
+
+</body>
+</html>

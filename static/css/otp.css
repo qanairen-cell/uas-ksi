@@ -1,0 +1,91 @@
+/* otp.css */
+
+/* Warna pink soft yang digunakan */
+:root {
+    --soft-pink-bg: #fdf5f6;      
+    --light-pink: #f8c8d0;       
+    --medium-pink: #f19eb0;      
+    --dark-pink: #e96d85;        
+    --white: #ffffff;
+    --dark-text: #333333;
+    --shadow-pink: rgba(241, 158, 176, 0.4);
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--soft-pink-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container untuk memusatkan form */
+.otp-container {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-pink);
+    width: 300px; 
+    border: 1px solid var(--light-pink);
+    text-align: center;
+}
+
+h2 {
+    color: var(--dark-pink);
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+p {
+    color: var(--dark-text);
+    font-size: 0.9em;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid var(--light-pink);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    text-align: center; 
+    letter-spacing: 5px; /* Memberi jarak antar digit OTP */
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: var(--dark-pink);
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: var(--dark-pink);
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--medium-pink);
+}
+
+/* Menonaktifkan letter-spacing HANYA saat placeholder terlihat */
+input[type="text"]::placeholder {
+    letter-spacing: normal;
+}

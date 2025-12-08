@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifikasi Kode OTP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/otp.css') }}">
+</head>
+<body>
+    <div class="otp-container">
+        <h2>Masukkan Kode OTP</h2>
+        <p>Kode telah dikirimkan ke email Anda. Berlaku selama 5 menit.</p>
+        
+        <form method="post" action="/otp"> 
+            <input 
+                type="text" 
+                name="otp" 
+                placeholder="Masukkan 6 Digit OTP" 
+                maxlength="6" 
+                required
+                autocomplete="off">
+            
+            <button type="submit">Verifikasi</button>
+        </form>
+    </div>
+</body>
+</html>

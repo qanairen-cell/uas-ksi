@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard User</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}">
+</head>
+<body>
+    <div class="user-container"> 
+        <h2>Dashboard User</h2>
+
+        <p><strong>Email:</strong> {{ session.email }}</p>
+        <p><strong>Role:</strong> {{ session.role }}</p>
+
+        <hr>
+
+        <p>
+            Kamu login sebagai <strong>User</strong>.<br>
+            Kamu tidak memiliki akses administrasi sistem.
+        </p>
+
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>

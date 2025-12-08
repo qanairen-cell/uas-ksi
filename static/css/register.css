@@ -1,0 +1,103 @@
+/* register.css */
+
+/* Warna pink soft yang digunakan (Konsisten dengan login.css) */
+:root {
+    --soft-pink-bg: #fdf5f6;       /* Latar belakang sangat muda */
+    --light-pink: #f8c8d0;       /* Latar belakang utama/batas */
+    --medium-pink: #f19eb0;      /* Untuk teks/hover */
+    --dark-pink: #e96d85;        /* Untuk tombol/aksi */
+    --white: #ffffff;
+    --dark-text: #333333;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--soft-pink-bg); /* Latar belakang halaman yang sangat lembut */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    color: var(--dark-pink); /* Judul dengan warna pink yang lebih kuat */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: var(--white); /* Kotak form putih untuk kontras */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(241, 158, 176, 0.4); /* Bayangan lembut pink */
+    width: 300px;
+    border: 1px solid var(--light-pink); /* Garis batas tipis pink */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--medium-pink); /* Label dengan pink sedang */
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid var(--light-pink); /* Batas input pink muda */
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: var(--dark-pink); /* Fokus input dengan pink yang lebih kuat */
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: var(--dark-pink); /* Tombol pink yang kuat */
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--medium-pink); /* Efek hover menjadi pink sedang */
+}
+
+/* --- PENYESUAIAN UNTUK TAUTAN LOGIN --- */
+
+.login-link {
+    /* Untuk menengahkan teks dan memberi sedikit jarak dari tombol Register */
+    text-align: center; 
+    margin-top: 20px;
+    font-size: 0.9em; /* Teks sedikit lebih kecil */
+    color: var(--dark-text); /* Warna teks biasa */
+}
+
+.login-link a {
+    /* Pengaturan gaya untuk tautan 'Login' */
+    color: var(--dark-pink); /* Warna pink yang kuat */
+    text-decoration: none; /* Menghilangkan garis bawah default */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    /* Efek hover untuk menunjukkan interaksi */
+    color: var(--medium-pink); /* Berubah menjadi pink sedang saat dihover */
+    text-decoration: underline; /* Menambahkan garis bawah saat dihover */
+}

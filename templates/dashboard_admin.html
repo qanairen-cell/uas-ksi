@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <div class="admin-container"> 
+        <h2>Dashboard Admin</h2>
+
+        <p><strong>Email:</strong> {{ session.email }}</p>
+        <p><strong>Role:</strong> {{ session.role }}</p>
+
+        <hr>
+
+        <h3>Fitur Administrasi</h3>
+
+        <ul>
+            <li><a href="/admin/users">Kelola User</a></li>
+            <!--
+            <li><a href="#">Lihat Log Login</a></li>
+            -->
+        </ul>
+
+        <a href="/logout">Logout</a>
+    </div>
+    </body>
+</html>
