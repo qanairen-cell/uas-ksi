@@ -2,7 +2,7 @@
 
 /* Warna pink soft yang digunakan (Konsisten dengan login.css) */
 :root {
-    --soft-pink-bg: #fdf5f6;       /* Latar belakang sangat muda */
+    --soft-pink-bg: #f7c4c9;       /* Latar belakang sangat muda */
     --light-pink: #f8c8d0;       /* Latar belakang utama/batas */
     --medium-pink: #f19eb0;      /* Untuk teks/hover */
     --dark-pink: #e96d85;        /* Untuk tombol/aksi */
