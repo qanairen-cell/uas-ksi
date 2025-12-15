@@ -230,10 +230,3 @@ def logout():
     session.clear()
     flash("Anda telah berhasil logout.", "info")
     return redirect("/")
-
-
-# =======================
-# MAIN
-# =======================
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
