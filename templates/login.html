@@ -3,19 +3,32 @@
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
-</head> 
+    </head> 
 <body>
 
     <form method="POST" action="/login">
         <h2>Login</h2>
-        <label>Email</label><br>
-        <input type="email" name="email" required><br><br>
 
-        <label>Password</label><br>
-        <input type="password" name="password" required><br><br>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
 
         <button type="submit">Login</button>
         
+        <p class="forgot-password">
+            <a href="{{ url_for('forgot_password') }}">Lupa Kata Sandi?</a>
+        </p>
+
         <p class="register-link">
             Belum punya akun? 
             <a href="/register">Daftar</a>
