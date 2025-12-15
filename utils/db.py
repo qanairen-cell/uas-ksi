@@ -1,9 +1,5 @@
 import psycopg2
 import os
-from dotenv import load_dotenv
-
-# Load .env
-load_dotenv()
 
 def get_db():
     try:
@@ -13,7 +9,7 @@ def get_db():
             user=os.getenv("PGUSER"),
             password=os.getenv("PGPASSWORD"),
             database=os.getenv("PGDATABASE"),
-            sslmode="require"   # Railway WAJIB pakai SSL!
+            sslmode="require"
         )
         return conn
     except Exception as e:
